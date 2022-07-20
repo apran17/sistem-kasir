@@ -10,6 +10,34 @@
 
 <body>
 
+    <!-- Example Code -->
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="../index.php">HOME</a>
+                    <a class="nav-link" href="../tb_barang/index.php">BARANG</a>
+                    <a class="nav-link" href="../tb_cabang/index.php">CABANG</a>
+                    <a class="nav-link" href="../tb_kasir/index.php">KASIR</a>
+                    <a class="nav-link" href="../tb_kategori/index.php">KATEGORI</a>
+                    <a class="nav-link" href="../tb_member/index.php">MEMBER</a>
+                    <a class="navbar-brand" href="#">METODE PEMBAYARAN</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="nav-link" href="../tb_perusahaan/index.php">PERUSAHAAN</a>
+                    <a class="nav-link" href="../tb_supplier/index.php">SUPPLIER</a>
+                    <a class="nav-link" href="">TRANSAKSI</a>
+                    <a class="nav-link" href="">TRANSAKSI DETAIL</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- End Example Code -->
+
     <div class="container" style="margin-top: 80px">
         <div class="row">
             <div class="col-md-12">
