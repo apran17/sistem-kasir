@@ -11,7 +11,6 @@
 <body>
 
     <!-- Example Code -->
-
     <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">HOME</a>
@@ -35,8 +34,6 @@
         </div>
     </nav>
 
-    </div>
-    </nav>
 
     <!-- End Example Code -->
 
