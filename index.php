@@ -1,4 +1,11 @@
 <?php
+
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("location: login1.php");
+    exit;
+}
+
 include 'database/koneksi.php';
 include 'page/layout/js.php';
 ?>
@@ -93,20 +100,21 @@ include 'page/layout/js.php';
     }
     ?>
     <?php
-   
+
     include 'page/layout/footer.php';
-   
+
     ?>
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/dataTable.min.js"></script>
-<script src="assets/js/scripku.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#myTable').DataTable();
-    });
-</script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/dataTable.min.js"></script>
+    <script src="assets/js/scripku.js"></script>
+    <script src="assets/js/sw.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable();
+        });
+    </script>
 </body>
 
 </html>

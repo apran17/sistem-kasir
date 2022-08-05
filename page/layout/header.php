@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="index.php"><img src="assets/image/indomaret.png" width="100px" ; height="60px"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,16 +14,16 @@
       <li class="nav-item">
         <a class="nav-link" href="index.php?page=barang">Barang</a>
       </li>
-	  <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" href="index.php?page=perusahaan">Perusahaan</a>
       </li>
-	  <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" href=" index.php?page=cabang">cabang</a>
       </li>
-	  <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" href="index.php?page=kasir">kasir</a>
       </li>
-	  <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" href="index.php?page=member">member</a>
       </li>
       <li class="nav-item">
@@ -33,7 +32,9 @@
       <li class="nav-item">
         <a class="nav-link" href="index.php?page=transaksi">transaksi</a>
       </li>
+      <li class="nav-item">
+        <a class="btn btn-primary" href="logout.php">logout</a>
+      </li>
     </ul>
   </div>
 </nav>
-	

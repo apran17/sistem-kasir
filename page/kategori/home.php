@@ -4,7 +4,7 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header text-center">
-            Data Kategori
+            DATA KATEGORI
           </div>
           <div class="card-body">
             <a href="index.php?page=kategori&act=tambah" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>

@@ -3,8 +3,8 @@
     <div class="row">
       <div class="col-md-12">
         <div class="card">
-          <div class="card-header">
-            DATA Barang
+          <div class="card-header text-center">
+            DATA BARANG
           </div>
           <div class="card-body">
             <a href="index.php?page=barang&act=tambah" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
