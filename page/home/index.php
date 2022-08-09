@@ -1,0 +1,1 @@
+<p class="h2">h2. Bootstrap heading</p>

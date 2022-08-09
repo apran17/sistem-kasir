@@ -1,3 +1,24 @@
+<?php
+$id_transaksi = $_GET['id'];
+require 'simpan.php';
+
+if (isset($_POST["simpan"])) {
+
+  if (save($_POST) > 0) {
+
+    echo "<script>
+        alert('user baru berhasil ditambahkan!')
+        </script>";
+    header("location: index.php?page=detail&act=home&id=$id_transaksi");
+    exit;
+  } else {
+    echo mysqli_error($connection);
+  }
+}
+
+
+?>
+
 <div class="container" style="margin-top: 80px">
   <div class="row">
     <div class="col-md-8 offset-md-2">
@@ -6,7 +27,7 @@
           TAMBAHKAN DETAIL TRANSAKSI
         </div>
         <div class="card-body">
-          <form action="index.php?page=detail&act=simpan" method="POST">
+          <form action="" method="POST">
 
             <div class="form-group">
               <label>Barang</label>
@@ -16,33 +37,34 @@
               $b = " ) ";
               ?>
               <select required name="id_barang" class="form-control">
-                <?php while ($row1 = mysqli_fetch_array($query)) { ?>
-                  <option value="<?php echo $row1['id_barang'] ?>"><?php echo $row1['nama_br'] . $a . $row1['harga_jual'] . $b; ?></option>
+                <?php while ($row11 = mysqli_fetch_array($query)) { ?>
+                  <option value="<?php echo $row11['id_barang'] ?>"><?php echo $row11['nama_br'] . $a . $row11['harga_jual'] . $b; ?></option>
                 <?php }   ?>
               </select>
             </div>
-            <div>
-              <div class="form-group">
-                <label> ID Transaksi</label>
-                <?php
-                $id_transaksi = $_GET['id'];
-                $query = mysqli_query($connection, "SELECT * FROM tb_transaksi where id_transaksi='$id_transaksi'");
-                ?>
-                <select required name="id_transaksi" class="form-control">
-                  <?php while ($row1 = mysqli_fetch_array($query)) { ?>
-                    <option value="<?php echo $row1['id_transaksi'] ?>"><?php echo $row1['kode_inv']; ?></option>
-                  <?php }   ?>
-                </select>
-              </div>
+
+            <div class="form-group">
+              <label> Kode Invoice</label>
+              <?php
+              $id_transaksi = $_GET['id'];
+              $query = mysqli_query($connection, "SELECT * FROM tb_transaksi where id_transaksi='$id_transaksi'");
+              ?>
+              <?php while ($row1 = mysqli_fetch_array($query)) { ?>
+                <input type="hidden" name="id_transaksi" value="<?php echo $row1['id_transaksi'] ?>" class="form-control">
+                <input type="text" readonly name="kode_inv" value="<?php echo $row1['kode_inv'] ?>" class="form-control">
+              <?php }   ?>
+            </div>
 
 
-              <div class="form-group">
-                <label>Jumlah Barang</label>
-                <input required type="int" id="jumlah" name="jumlah" class="form-control">
-              </div>
+            <div class="form-group">
+              <label>Jumlah Barang</label>
+              <input required type="int" id="jumlah" name="jumlah" class="form-control">
+              <input type="hidden" name="harga_total" class="form-control">
+            </div>
 
-              <button type="submit" class="btn btn-success">SIMPAN</button>
-              <button type="reset" class="btn btn-warning">RESET</button>
+            <button type="submit" name="simpan" class="btn btn-success">SIMPAN</button>
+            <button type="reset" class="btn btn-warning">RESET</button>
+            <a href="index.php?page=detail&act=home&id=<?= $_GET['id'] ?>" class="btn btn-primary">Back</a>
 
           </form>
         </div>

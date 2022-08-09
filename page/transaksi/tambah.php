@@ -68,6 +68,7 @@
             <div class="form-group">
               <label>DISKON</label>
               <input type="int" name="diskon" required class="form-control">
+              <input type="hidden" value="proses" name="status">
             </div>
 
             <div class="form-group">
@@ -82,15 +83,6 @@
                 <?php }   ?>
               </select>
             </div>
-
-            <div class="form-group">
-              <label>status</label><br>
-              <input type="radio" name="status" value="Proses">
-              <label for="proses">Proses</label>
-              <input type="radio" name="status" value="Selesai">
-              <label for="selesai">Selesai</label>
-            </div>
-
 
             <button type="submit" class="btn btn-success">SIMPAN</button>
             <button type="reset" class="btn btn-warning">RESET</button>

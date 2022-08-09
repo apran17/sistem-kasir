@@ -8,8 +8,6 @@ if (isset($_POST["register"])) {
         echo "<script>
         alert('user baru berhasil ditambahkan!');
         </script>";
-        header("location: login1.php");
-        exit;
     } else {
         echo mysqli_error($connection);
     }
@@ -54,14 +52,24 @@ if (isset($_POST["register"])) {
                                 <input type="password" class="form-control" name="password2" id="password2" required>
                             </div>
 
-                            <button type="submit" class=" btn btn-success" name="register">register</button>
+                            <button type="submit" id="register" class=" btn btn-success" name="register">register</button>
+                            <a href="login1.php" type="submit" class=" btn btn-primary" name="login">login</a>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    <Script>
+        const register = document.querySelector('#register');
+        register.addEventListener('click', function() {
+            Swal.fire(
+                'The Internet?',
+                'That thing is still around?',
+                'error')
+        });
+    </Script>
+    <script src="assets/js/sweetalert2.all.min.js"></script>
 </body>
 
 </html>

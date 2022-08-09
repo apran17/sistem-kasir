@@ -74,7 +74,7 @@
                         <a href="index.php?page=transaksi&act=hapus&id=' . $id_transaksi . '" class="btn btn-sm btn-danger">HAPUS</a>
                         <a href="index.php?page=detail&id=' . $id_transaksi . '" class="btn btn-sm btn-warning">DETAIL</a>';
                       } else if ($row['status'] === "selesai") {
-                        echo '<a href="index.php?page=cetak&id=' . $id_transaksi . '" class="btn btn-sm btn-info">STRUK</a>';
+                        echo '<a href="index.php?page=cetak&id=' . $id_transaksi . '" class="btn btn-sm btn-info">CETAK</a>';
                       } ?>
                     </td>
                   </tr>

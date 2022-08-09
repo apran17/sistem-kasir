@@ -1,7 +1,7 @@
  <?php
-    session_start();
+   session_start();
 
-    session_destroy();
+   session_destroy();
 
-    header("location: login1.php");
-    exit;
+   header("location: login1.php");
+   exit;

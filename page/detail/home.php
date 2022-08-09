@@ -46,7 +46,7 @@
                   <td>Rp.<?php echo $result2 ?></td>
 
                   <td class="text-center">
-                    <a href="index.php?page=detail&act=edit&id=<?php echo $row['id_transaksi_dtl'] ?>" class="btn btn-sm btn-primary">EDIT</a>
+                    <a href="index.php?page=detail&act=edit&id=<?php echo $row['id_transaksi_dtl'] ?>&id_transaksi=<?php echo $_GET['id'] ?>" class="btn btn-sm btn-primary">EDIT</a>
                     <a href="index.php?page=detail&act=hapus&id=<?php echo $row['id_transaksi_dtl'] ?>&id_transaksi=<?php echo $_GET['id'] ?>" class="btn btn-sm btn-danger">HAPUS</a>
                   </td>
                 </tr>
